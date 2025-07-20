@@ -1,6 +1,5 @@
 package com.RealtimeChatify.App.config;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.converter.DefaultContentTypeResolver;
 import org.springframework.messaging.converter.MappingJackson2MessageConverter;
@@ -18,9 +17,6 @@ import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON;
 @EnableWebSocketMessageBroker
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
-    @Value("${frontend.url}")
-    private String frontend;
-
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
 
@@ -34,7 +30,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     public void registerStompEndpoints(StompEndpointRegistry registry) {
 
         registry.addEndpoint("/ws")
-                .setAllowedOrigins(frontend)
+                .setAllowedOrigins("http://localhost:3000")
                 .withSockJS();
     }
 

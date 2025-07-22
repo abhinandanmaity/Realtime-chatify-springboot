@@ -10,7 +10,7 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@CrossOrigin(origins = "http://localhost:3000") // Allow requests from React app
+@CrossOrigin(origins = "https://realtime-chatify.netlify.app") // Allow requests from React app
 public class WebSocketController {
 
     private SimpMessagingTemplate simpMessageTemplate;

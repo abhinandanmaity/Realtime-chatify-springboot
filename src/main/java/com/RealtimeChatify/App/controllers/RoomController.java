@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.Set;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000") // Allow requests from React app
+@CrossOrigin(origins = "https://realtime-chatify.netlify.app") // Allow requests from React app
 @RequestMapping("/api/rooms")
 public class RoomController {
 

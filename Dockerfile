@@ -33,13 +33,13 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Stage 2: Run the app
-FROM eclipse-temurin:21-jdk
+FROM eclipse-temurin:23-jdk
 
 WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/target/chat-0.0.1-SNAPSHOT.jar .
 
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "/app/chat-0.0.1-SNAPSHOT.jar"]
 
 
 

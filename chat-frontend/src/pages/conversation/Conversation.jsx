@@ -39,7 +39,7 @@ const Conversation = ({ }) => {
     const groups = useSelector((state) => state.groups.value)
     // useSelector((state) => state.userprofile.value)
     const user = getUserDetails()
-    const { message, sendMessage } = useWebSocketGroup("http://localhost:8080/ws");
+    const { message, sendMessage } = useWebSocketGroup("https://realtime-chat-w3ev.onrender.com/ws");
 
 
     // const dispatch = useDispatch()

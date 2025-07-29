@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000") // Allow requests from React app
+@CrossOrigin(origins = "https://realtime-chatify.netlify.app") // Allow requests from React app
 @RequestMapping("/api/friends")
 public class FriendController {
 
